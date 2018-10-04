@@ -3,7 +3,7 @@ service:
   - docker
 
 before_install:
-  - docker build -t hkusanic/react-test -f client/Dockerfile.dev ./client
+  - docker build -t hkusanic/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run hkusanic/react-test npm test -- --coverage
